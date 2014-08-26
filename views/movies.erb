@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> movies </title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+
+  <body>
+    <h2>All Movies</h2>
+    <p><a href="/actors">Go to the Actors page</a></p>
+    <table>
+      <tr>
+        <td>Movie</td>
+        <td>Rating</td>
+        <td>Genre</td>
+        <td>Studios</td>
+      </tr>
+
+      <% @movies.each do |movie|%>
+
+      <tr>
+        <td>
+          <strong>
+            <a href="/movies/<%=movie['id']%>"><%= movie['title'] %></a>
+          </strong>
+          <%=  movie['year'] %>
+        </td>
+        <td><%= movie['rating'] %> </td>
+        <td><%= movie['genre'] %></td>
+        <td><%= movie['studio'] %></td>
+      </tr>
+      <%end%>
+
+    </table>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html
+<html lang="en">
+  <head>
+    <title><%=@actors[0]['actor']%> </title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+
+  <body>
+    <h3><%=@actors[0]['actor']%></h3>
+    <ul>
+      <%@actors.each do |actor|%>
+         <li><%= "Movie: #{actor['movie']}" %>
+         <%="(#{actor['year']})" %>
+         <%="Genre: #{actor['genre']}" %></li>
+      <%end%>
+    </ul>
+  <a href="/actors">Go back to the Actors page</a>
+
+
+  </body>
+</html>
